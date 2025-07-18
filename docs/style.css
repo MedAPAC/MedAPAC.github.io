@@ -452,79 +452,86 @@ body {
 
 
 /* =================================== */
-/* chatbot        */
+/* Chatbot Styles                      */
 /* =================================== */
 
-/* 1. The round button to open the chat */
 .chat-open-button {
-  background-color: #007bff;
+  background-color: #17a2b8;
   color: white;
   border: none;
   cursor: pointer;
-  opacity: 0.9;
   position: fixed;
   bottom: 23px;
   right: 28px;
-  /* Make it a circle */
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  /* Center the icon */
   font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 0;
-  /* Z-index and hover effect */
   z-index: 998;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-
 .chat-open-button:hover {
-  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* 2. The popup chat window (main container) */
+/* MODIFICATION: Animated Chat Popup */
 .chat-popup {
-  display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   z-index: 999;
-  width: 340px;
-  /* Remove border and background, as the inner container will handle it */
-  background: transparent;
-  border: none;
+  width: 350px;
+  /* Start hidden */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.chat-popup.open {
+  /* Become visible */
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
-/* 3. The actual chat container with the transparent background */
+/* MODIFICATION: Resizable container */
 .chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  max-height: 80vh; /* Don't get too tall on large screens */
   border-radius: 15px;
-  overflow: hidden; /* Important for keeping child elements within the rounded borders */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  /* Transparent background with a blur effect for modern look */
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
   background-color: rgba(30, 30, 30, 0.7);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Make it resizable! */
+  resize: both;
+  min-width: 320px;
+  min-height: 400px;
 }
 
-/* 4. Chat header styling */
 .chat-header {
   padding: 15px 20px;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0; /* Header should not shrink */
 }
-
 .chat-header h2 {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
 }
-
 .chat-close-button {
   background: none;
   border: none;
@@ -532,43 +539,66 @@ body {
   font-size: 24px;
   cursor: pointer;
   opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
 }
 .chat-close-button:hover {
     opacity: 1;
+    transform: rotate(90deg);
 }
 
-/* 5. Chat messages area */
+/* Language selector */
+.lang-btn {
+    background: #444;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+.lang-btn.active {
+    background: #17a2b8;
+    border-color: #17a2b8;
+    opacity: 1;
+    font-weight: bold;
+}
+
 .chat-messages {
-  padding: 20px;
-  height: 350px;
+  padding: 15px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: transparent; /* Inherits from chat-container */
+  flex-grow: 1; /* Messages area should take up available space */
 }
 
-/* Custom scrollbar for dark theme */
-.chat-messages::-webkit-scrollbar {
-  width: 8px;
-}
-.chat-messages::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* Custom scrollbar */
+.chat-messages::-webkit-scrollbar { width: 8px; }
+.chat-messages::-webkit-scrollbar-track { background: transparent; }
 .chat-messages::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  border: 3px solid transparent;
 }
 
-/* 6. Individual message bubbles */
+/* MODIFICATION: Message animation */
 .message {
-  padding: 10px 15px;
-  border-radius: 18px;
-  max-width: 80%;
+  max-width: 85%;
   word-wrap: break-word;
   line-height: 1.4;
   font-size: 14px;
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .message.sent {
@@ -576,22 +606,36 @@ body {
   color: white;
   align-self: flex-end;
   border-radius: 18px 18px 5px 18px;
+  padding: 10px 15px;
 }
 
+/* MODIFICATION: Style for received messages with icon */
 .message.received {
-  background-color: rgba(80, 80, 80, 0.7); /* Dark, semi-transparent bubble */
-  color: #f1f1f1;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
   align-self: flex-start;
+}
+.agent-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #495057;
+  flex-shrink: 0;
+}
+.message-content {
+  background-color: rgba(80, 80, 80, 0.7);
+  color: #f1f1f1;
   border-radius: 18px 18px 18px 5px;
+  padding: 10px 15px;
 }
 
-/* 7. Chat input area */
 .chat-input-container {
   display: flex;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.3); /* Matches header */
+  background-color: rgba(0, 0, 0, 0.3);
+  flex-shrink: 0; /* Input should not shrink */
 }
-
 .chat-input {
   flex: 1;
   padding: 12px 15px;
@@ -601,16 +645,11 @@ body {
   color: #ffffff;
   font-size: 14px;
 }
-
-.chat-input::placeholder {
-    color: #8a8a8a;
-}
-
+.chat-input::placeholder { color: #8a8a8a; }
 .chat-input:focus {
   outline: none;
   border-color: #17a2b8;
 }
-
 .chat-send-button {
   background-color: #17a2b8;
   color: white;
@@ -621,26 +660,43 @@ body {
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
-
 .chat-send-button:hover {
-  background-color: #0056b3;
-}
-/* Add this to your style.css file */
-.lang-btn {
-    background: #444;
-    color: #fff;
-    border: 1px solid #666;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-    opacity: 0.7;
+  background-color: #138496;
+  transform: scale(1.05);
 }
 
-.lang-btn.active {
-    background: #17a2b8;
-    border-color: #17a2b8;
-    opacity: 1;
+/* MODIFICATION: Typing indicator styles */
+#typing-indicator {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+#typing-indicator .message-content {
+    padding: 12px 15px;
+}
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: typing 1.4s infinite;
+}
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1.0);
+    }
 }

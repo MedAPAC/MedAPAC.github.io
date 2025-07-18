@@ -31,7 +31,8 @@
 
 
 
-        <button class="chat-open-button" onclick="openChat()">💬</button>
+
+        <button class="chat-open-button" id="open-chat-btn">💬</button>
 
         <div class="chat-popup" id="aiChat">
             <div class="chat-container">
@@ -43,13 +44,16 @@
                             <button class="lang-btn" data-lang="fa">فارسی</button>
                         </div>
                     </div>
-                    <button type="button" class="chat-close-button" onclick="closeChat()">×</button>
+                    <button type="button" id="close-chat-btn" class="chat-close-button">×</button>
                 </div>
+
                 <div id="chatMessages" class="chat-messages">
-                    </div>
+                    <div id="typing-indicator-container"></div>
+                </div>
+
                 <div class="chat-input-container">
                     <input type="text" id="userInput" class="chat-input" placeholder="Ask a question...">
-                    <button onclick="sendMessage()" class="chat-send-button">Send</button>
+                    <button id="send-chat-btn" class="chat-send-button">Send</button>
                 </div>
             </div>
         </div>

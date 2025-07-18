@@ -2,6 +2,7 @@
 const words = ["beautiful", "scalable", "mobile", "fast", "modern", "web"];
 let index = 0;
 const dynamicTextElement = document.getElementById('hero-dynamic-text');
+let chatUserId = null;
 
 // Function to change the word
 function changeWord() {
@@ -161,26 +162,38 @@ async function sendMessage() {
   userMessageElement.textContent = message;
   chatMessages.appendChild(userMessageElement);
 
-  // Clear the input field
+  // Clear the input field and scroll to the bottom
   userInput.value = "";
-  chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  // Find the active language button to send the language preference
+  const activeButton = document.querySelector('#language-selector .lang-btn.active');
+  const lang = activeButton ? activeButton.dataset.lang : 'en';
 
   try {
-    // --- Send message to your API ---
-    const response = await fetch('/ask-ai', { // <-- IMPORTANT: Replace with your API endpoint
+    // --- Send message to your LIVE backend API ---
+    // IMPORTANT: Replace with your actual deployed backend URL
+    const response = await fetch('https://medpac-backend.onrender.com/ask-ai', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ message: message }),
+      // Send the message, the current user ID, and language
+      body: JSON.stringify({
+          message: message,
+          userId: chatUserId,
+          lang: lang
+      }),
     });
 
     if (!response.ok) {
         throw new Error("API response was not ok.");
     }
-    
+
     const data = await response.json();
-    const aiResponse = data.reply; // Assuming your API returns a JSON with a 'reply' field
+    const aiResponse = data.reply;
+    // IMPORTANT: Store the user ID from the response to maintain conversation context
+    chatUserId = data.userId;
 
     // Display AI's response
     const aiMessageElement = document.createElement("div");

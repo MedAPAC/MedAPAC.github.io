@@ -27,11 +27,13 @@ app = FastAPI()
 # This allows your frontend (running on a different domain or port)
 # to communicate with this backend.
 origins = [
+    # Add your live frontend URL here
+    "https://medapac.github.io/",
+    # Keep localhost URLs for local testing
     "http://localhost",
     "http://localhost:8000",
     "http://127.0.0.1",
     "http://127.0.0.1:8000",
-    # Add the origin of your deployed frontend if applicable
 ]
 
 app.add_middleware(

@@ -504,18 +504,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 500px;
-  max-height: 80vh; /* Don't get too tall on large screens */
+  max-height: 80vh;
   border-radius: 15px;
-  overflow: hidden;
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
   background-color: rgba(30, 30, 30, 0.7);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  /* Make it resizable! */
-  resize: both;
   min-width: 320px;
   min-height: 400px;
+  resize: both;
+  overflow: auto; /* This line was changed from 'hidden' to 'auto' */
 }
 
 .chat-header {
@@ -612,7 +611,7 @@ body {
 /* MODIFICATION: Style for received messages with icon */
 .message.received {
   display: flex;
-  align-items: flex-end;
+  align-items: center; /* This change vertically centers the icon */
   gap: 10px;
   align-self: flex-start;
 }
@@ -620,7 +619,6 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #495057;
   flex-shrink: 0;
 }
 .message-content {

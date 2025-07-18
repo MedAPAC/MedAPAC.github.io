@@ -136,3 +136,72 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     }
 });
+
+// Function to open the chat window
+function openChat() {
+  document.getElementById("aiChat").style.display = "block";
+}
+
+// Function to close the chat window
+function closeChat() {
+  document.getElementById("aiChat").style.display = "none";
+}
+
+// Function to send a message
+async function sendMessage() {
+  const userInput = document.getElementById("userInput");
+  const message = userInput.value;
+  if (message.trim() === "") return;
+
+  const chatMessages = document.getElementById("chatMessages");
+
+  // Display user's message
+  const userMessageElement = document.createElement("div");
+  userMessageElement.classList.add("message", "sent");
+  userMessageElement.textContent = message;
+  chatMessages.appendChild(userMessageElement);
+
+  // Clear the input field
+  userInput.value = "";
+  chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+
+  try {
+    // --- Send message to your API ---
+    const response = await fetch('/ask-ai', { // <-- IMPORTANT: Replace with your API endpoint
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message: message }),
+    });
+
+    if (!response.ok) {
+        throw new Error("API response was not ok.");
+    }
+    
+    const data = await response.json();
+    const aiResponse = data.reply; // Assuming your API returns a JSON with a 'reply' field
+
+    // Display AI's response
+    const aiMessageElement = document.createElement("div");
+    aiMessageElement.classList.add("message", "received");
+    aiMessageElement.textContent = aiResponse;
+    chatMessages.appendChild(aiMessageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+
+  } catch (error) {
+    console.error("Error fetching AI response:", error);
+    const errorMessageElement = document.createElement("div");
+    errorMessageElement.classList.add("message", "received");
+    errorMessageElement.textContent = "Sorry, something went wrong. Please try again.";
+    chatMessages.appendChild(errorMessageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+  }
+}
+
+// Allow sending message by pressing "Enter"
+document.getElementById("userInput").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});

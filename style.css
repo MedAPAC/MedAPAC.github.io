@@ -449,3 +449,181 @@ body {
     color: #fff;
     border-color: #17a2b8;
 }
+
+
+/* =================================== */
+/* chatbot        */
+/* =================================== */
+
+/* 1. The round button to open the chat */
+.chat-open-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  /* Make it a circle */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* Center the icon */
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  /* Z-index and hover effect */
+  z-index: 998;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.chat-open-button:hover {
+  opacity: 1;
+}
+
+/* 2. The popup chat window (main container) */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 999;
+  width: 340px;
+  /* Remove border and background, as the inner container will handle it */
+  background: transparent;
+  border: none;
+}
+
+/* 3. The actual chat container with the transparent background */
+.chat-container {
+  border-radius: 15px;
+  overflow: hidden; /* Important for keeping child elements within the rounded borders */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* Transparent background with a blur effect for modern look */
+  background-color: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 4. Chat header styling */
+.chat-header {
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chat-close-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.chat-close-button:hover {
+    opacity: 1;
+}
+
+/* 5. Chat messages area */
+.chat-messages {
+  padding: 20px;
+  height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: transparent; /* Inherits from chat-container */
+}
+
+/* Custom scrollbar for dark theme */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+/* 6. Individual message bubbles */
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.message.sent {
+  background-color: #17a2b8;
+  color: white;
+  align-self: flex-end;
+  border-radius: 18px 18px 5px 18px;
+}
+
+.message.received {
+  background-color: rgba(80, 80, 80, 0.7); /* Dark, semi-transparent bubble */
+  color: #f1f1f1;
+  align-self: flex-start;
+  border-radius: 18px 18px 18px 5px;
+}
+
+/* 7. Chat input area */
+.chat-input-container {
+  display: flex;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3); /* Matches header */
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.chat-input::placeholder {
+    color: #8a8a8a;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #17a2b8;
+}
+
+.chat-send-button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.chat-send-button:hover {
+  background-color: #0056b3;
+}

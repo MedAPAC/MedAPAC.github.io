@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (teamCarousel) {
         // --- 1. Team Member Data ---
         const teamMembers = [
-            { name: "Emily Carter", position: "Lead Front-End Developer", image: "section5/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Jon Arshaf", position: "Digital Marketer", image: "section5/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Kani Jon", position: "UI/UX Designer", image: "section5/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Maria Rodriguez", position: "Back-End Developer", image: "section5/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Alex Chen", position: "Project Manager", image: "section5/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "David Smith", position: "DevOps Engineer", image: "section5/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Sophia Loren", position: "QA Tester", image: "section5/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Michael B.", position: "Data Scientist", image: "section5/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Chris Evans", position: "Mobile Developer", image: "section5/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Jessica Alba", position: "Content Strategist", image: "section5/person3.png", linkedin: "#", github: "#", personalPage: "#" }
+            { name: "Emily Carter", position: "Lead Front-End Developer", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Jon Arshaf", position: "Digital Marketer", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Kani Jon", position: "UI/UX Designer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Maria Rodriguez", position: "Back-End Developer", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Alex Chen", position: "Project Manager", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "David Smith", position: "DevOps Engineer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Sophia Loren", position: "QA Tester", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Michael B.", position: "Data Scientist", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Chris Evans", position: "Mobile Developer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
+            { name: "Jessica Alba", position: "Content Strategist", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" }
         ];
 
         // --- 2. Create and Inject HTML for each card ---

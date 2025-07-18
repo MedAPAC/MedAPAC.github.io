@@ -19,7 +19,7 @@ if not metis_api_key:
 try:
     client = openai.OpenAI(
         api_key=metis_api_key,
-        base_url="https://api.metisai.ir/openai/v1"  #
+        base_url="https://api.tapsage.com/openai/v1"  #
     )
 except Exception as e:
     # This helps catch any issues during client initialization
@@ -42,7 +42,7 @@ app = FastAPI()
 # --- CORS Middleware (No Changes Needed) ---
 # Ensure your live frontend URL is in this list
 origins = [
-    "https://medapac.github.io/",
+    "https://medapac.github.io",
     "http://localhost",
     "http://localhost:8000",
     "http://127.0.0.1",

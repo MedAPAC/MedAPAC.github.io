@@ -513,8 +513,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   min-width: 320px;
   min-height: 400px;
+  /* --- These two lines enable resizing --- */
   resize: both;
-  overflow: auto; /* This line was changed from 'hidden' to 'auto' */
+  overflow: auto; 
 }
 
 .chat-header {
@@ -698,3 +699,4 @@ body {
         transform: scale(1.0);
     }
 }
+

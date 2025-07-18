@@ -34,19 +34,24 @@
         <button class="chat-open-button" onclick="openChat()">💬</button>
 
         <div class="chat-popup" id="aiChat">
-        <div class="chat-container">
-            <div class="chat-header">
-            <h2>AI Assistant</h2>
-            <button class="chat-close-button" onclick="closeChat()">✖</button>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div>
+                        <h2 style="margin-bottom: 5px;">MedPAC Assistant</h2>
+                        <div id="language-selector">
+                            <button class="lang-btn active" data-lang="en">English</button>
+                            <button class="lang-btn" data-lang="fa">فارسی</button>
+                        </div>
+                    </div>
+                    <button type="button" class="chat-close-button" onclick="closeChat()">×</button>
+                </div>
+                <div id="chatMessages" class="chat-messages">
+                    </div>
+                <div class="chat-input-container">
+                    <input type="text" id="userInput" class="chat-input" placeholder="Ask a question...">
+                    <button onclick="sendMessage()" class="chat-send-button">Send</button>
+                </div>
             </div>
-            <div class="chat-messages" id="chatMessages">
-            <div class="message received">Hi there! How can I help you today?</div>
-            </div>
-            <div class="chat-input-container">
-            <input type="text" id="userInput" class="chat-input" placeholder="Type a message...">
-            <button class="chat-send-button" onclick="sendMessage()">Send</button>
-            </div>
-        </div>
         </div>
 
 

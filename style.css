@@ -1,0 +1,451 @@
+/* General Setup */
+body {
+    padding-top: 70px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #212529; /* Darkest background for body */
+    color: #f8f9fa;
+}
+
+/* --- Section Background Colors --- */
+.about-section {
+    background-color: #2c3034;
+}
+.project-section {
+    background-color: #343a40;
+}
+.service-section {
+    background-color: #2c3034;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: url('section1/hero-background.png') no-repeat center center;
+    background-size: cover;
+    min-height: 90vh;
+}
+.hero-section h1 {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.hero-section h1 span {
+    color: #17a2b8;
+}
+
+/* About Section */
+.about-images {
+    position: relative;
+    height: 450px;
+}
+.about-images img {
+    border-radius: 16px;
+    position: absolute;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.about-images img:hover {
+    transform: scale(1.05);
+}
+.about-img-1 { width: 60%; height: 300px; top: 0; left: 0; z-index: 2; }
+.about-img-2 { width: 55%; height: 250px; top: 50px; right: 0; z-index: 3; }
+.about-img-3 { width: 50%; height: 200px; bottom: 0; left: 25%; z-index: 4; }
+.about-section h2, .project-section h2, .service-section h2, .team-section h2 {
+    color: #17a2b8;
+}
+.about-section p {
+    color: #ced4da;
+}
+
+/* Project Section */
+.project-section .card {
+    background-color: #212529;
+    color: #f8f9fa;
+    transition: all 0.4s ease;
+}
+.project-section .card:hover {
+    transform: scale(1.05);
+    background-color: #2c3e50;
+}
+.project-section .card-body {
+    position: relative;
+    padding: 25px;
+}
+.project-section .card .mb-2 {
+    position: relative;
+    z-index: 1;
+}
+.project-section .card .badge {
+    background-color: #6c757d;
+    color: #f8f9fa;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.project-section .card:hover .badge {
+    background-color: #00796b;
+}
+.project-section .card-title {
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.project-section .card .btn {
+    position: relative;
+    z-index: 1;
+    background-color: #6c757d;
+    color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+.project-section .card:hover .btn {
+    background-color: #17a2b8;
+    color: #ffffff;
+}
+.card-deco-scribble {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    z-index: 0;
+    transition: opacity 0.4s ease;
+}
+.card-deco-scribble.default { opacity: 0.2; }
+.card-deco-scribble.on-hover { opacity: 0; }
+.project-section .card:hover .card-deco-scribble.default { opacity: 0; }
+.project-section .card:hover .card-deco-scribble.on-hover { opacity: 1; }
+
+/* Service Section */
+#service-list .list-group-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #5a5a5a !important;
+    font-size: 1.5rem;
+    color: #ced4da;
+    padding: 1.75rem 0.5rem;
+    font-weight: 500;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+#service-list .list-group-item:first-child {
+    border-top: 1px solid #5a5a5a !important;
+}
+#service-list .list-group-item:hover {
+    color: #17a2b8;
+    font-weight: 700;
+    transform: translateX(15px);
+}
+.service-arrow {
+    float: right;
+    color: #17a2b8;
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#service-list .list-group-item:hover .service-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ================================================== */
+/* ============== Our Team Section Styles ============== */
+/* ================================================== */
+
+.team-section {
+    background-color: #343a40;
+    overflow-x: hidden;
+}
+
+.team-section h2 {
+    color: #17a2b8;
+}
+
+.team-carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    margin-top: 4rem;
+}
+
+.team-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Adds depth for 3D transforms */
+}
+
+.team-card {
+    position: absolute;
+    width: 320px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    background-color: #2c3e50; /* A solid background for the card */
+}
+
+/* Semi-transparent overlay for the ACTIVE card on hover */
+.team-card.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+/* Makes the overlay visible on ACTIVE card hover */
+.team-card.active:hover::after {
+    opacity: 1;
+}
+
+.team-card-img {
+    width: 100%;
+    height: 100%; /* Image now fills the card */
+    object-fit: cover;
+    object-position: top;
+    /* mix-blend-mode and opacity are removed to make image clear */
+}
+
+.team-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: #fff;
+    /* The gradient is now a background for the info text only */
+    background: linear-gradient(to top, #2C3E50 40%, #17a2b8 100%);
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 160px; /* Ensures enough space for text */
+}
+
+.team-card-info h5 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.team-card-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.team-social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.team-social-links a:hover {
+    color: #17a2b8;
+}
+
+/* The arrow link that appears on ACTIVE card hover */
+.personal-page-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(23, 162, 184, 0.9);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+/* Makes the arrow visible on ACTIVE card hover */
+.team-card.active:hover .personal-page-link {
+    opacity: 1;
+}
+
+/* --- Carousel Card States --- */
+.team-card.active {
+    transform: scale(1.05) translateX(0);
+    opacity: 1;
+    z-index: 10;
+}
+.team-card.next {
+    transform: scale(0.9) translateX(85%);
+    opacity: 0.7;
+    z-index: 8;
+}
+.team-card.prev {
+    transform: scale(0.9) translateX(-85%);
+    opacity: 0.7;
+    z-index: 8;
+}
+.team-card.next-2 {
+    transform: scale(0.8) translateX(170%);
+    opacity: 0.4;
+    z-index: 6;
+}
+.team-card.prev-2 {
+    transform: scale(0.8) translateX(-170%);
+    opacity: 0.4;
+    z-index: 6;
+}
+.team-card.hidden-prev {
+    transform: scale(0.7) translateX(-220%);
+    opacity: 0;
+    z-index: 1;
+}
+.team-card.hidden-next {
+    transform: scale(0.7) translateX(220%);
+    opacity: 0;
+    z-index: 1;
+}
+
+
+/* --- Navigation Buttons --- */
+.team-carousel-nav {
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    gap: 15px;
+    z-index: 20;
+}
+
+.btn-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(44, 62, 80, 0.7);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #17a2b8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .about-images {
+        height: 350px;
+        margin-bottom: 3rem;
+    }
+    .service-section h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    #service-list .list-group-item:hover {
+        transform: none;
+    }
+    /* On smaller screens, we revert to a 3-card view for clarity */
+    .team-card.next-2, .team-card.prev-2 {
+        opacity: 0;
+        transform: scale(0.7) translateX(0);
+    }
+    .team-card {
+        width: 280px;
+        height: 420px;
+    }
+    .team-card.prev {
+        transform: scale(0.8) translateX(-70%);
+    }
+    .team-card.next {
+        transform: scale(0.8) translateX(70%);
+    }
+    .team-carousel-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        width: 220px;
+        height: 330px;
+    }
+    .team-carousel-container {
+        height: 450px;
+    }
+    /* On mobile, only the active card is clearly visible */
+    .team-card.prev, .team-card.next {
+        transform: scale(0.8) translateX(0);
+        opacity: 0;
+    }
+    .team-card.active {
+        transform: scale(1) translateX(0);
+    }
+    .team-carousel-nav {
+        bottom: 0;
+    }
+}
+
+/* ================================================== */
+/* ================ Contact Section Styles ============== */
+/* ================================================== */
+
+.contact-section {
+    /* Alternating background color for section separation */
+    background-color: #2c3034;
+}
+
+.contact-section h2 {
+    color: #17a2b8;
+}
+
+.contact-card {
+    background-color: #343a40;
+    border-radius: 15px;
+    border: 1px solid #495057;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.contact-card .icon-container {
+    color: #17a2b8;
+}
+
+.contact-card .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact-card .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.contact-card .btn-outline-light {
+    font-weight: 500;
+}
+
+.contact-card .btn-outline-light:hover {
+    background-color: #17a2b8;
+    color: #fff;
+    border-color: #17a2b8;
+}

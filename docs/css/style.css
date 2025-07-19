@@ -20,7 +20,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: url('home/hero-background.png') no-repeat center center;
+    background: url('../home/hero-background.png') no-repeat center center;
     background-size: cover;
     min-height: 90vh;
 }

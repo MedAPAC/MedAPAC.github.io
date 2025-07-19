@@ -700,3 +700,48 @@ body {
     }
 }
 
+/* ================================================== */
+/* =================== Footer Styles ================== */
+/* ================================================== */
+
+.site-footer {
+    /* The background is now a subtle dark gradient */
+    background: linear-gradient(to right, #212529, #2c3034);
+}
+
+.site-footer h5 {
+    color: #fff;
+}
+
+.site-footer .text-info {
+    color: #17a2b8 !important; /* Ensures the brand name has the accent color */
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #17a2b8;
+}
+
+.social-icon {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #343a40;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #fff;
+    background-color: #17a2b8;
+    transform: translateY(-3px);
+}

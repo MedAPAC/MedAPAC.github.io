@@ -62,11 +62,10 @@ body.cv-page {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 15px; /* MODIFIED: Changed from 50% to create a square shape */
     border: 5px solid #17a2b8;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
-
 /* Shared Section Styles */
 .cv-section {
     background-color: #2c3034;
@@ -201,4 +200,73 @@ body.cv-page {
     50% { background-color: transparent; }
     99% { background-color: transparent; }
     100% { background-color: #17a2b8; }
+}
+
+/* =================================== */
+/* Project Card Grid
+/* =================================== */
+.project-card {
+    position: relative;
+    border-radius: 15px; /* Matches other rounded elements */
+    overflow: hidden; /* Ensures the overlay and image corners are clipped correctly */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-color: #343a40; /* Fallback color */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay for better text contrast */
+    color: #fff;
+    
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.project-card:hover img {
+    transform: scale(1.1); /* Zoom effect on the image */
+}
+
+.project-card-title {
+    font-weight: 700;
+    color: #17a2b8; /* Use accent color for the title */
+    margin-bottom: 0.75rem;
+    transform: translateY(10px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.project-card-description {
+    font-size: 0.9rem;
+    color: #ced4da;
+    transform: translateY(10px);
+    transition: transform 0.4s ease 0.2s;
+}
+
+/* Animate text on hover */
+.project-card:hover .project-card-title,
+.project-card:hover .project-card-description {
+    transform: translateY(0);
 }

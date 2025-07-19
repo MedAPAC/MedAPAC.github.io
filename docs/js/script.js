@@ -1,8 +1,8 @@
-// script.js
+// File: /js/script.js
 
 document.addEventListener('DOMContentLoaded', function () {
   let chatUserId = null;
-  let isChatInitialized = false; // Flag to check if initial greeting was sent
+  let isChatInitialized = false;
 
   // --- Hero Section Dynamic Text ---
   const words = ["beautiful", "scalable", "mobile", "fast", "modern", "web"];
@@ -25,21 +25,65 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- Team Section Carousel ---
-  // (Your existing team carousel code remains unchanged here)
   const teamCarousel = document.querySelector('.team-carousel');
   if (teamCarousel) {
+    //
+    // === START OF MODIFICATION ===
+    // This array is now generated based on your 'members' folder structure.
+    // If you add a new member, just add a new object to this list.
     const teamMembers = [
-            { name: "Emily Carter", position: "Lead Front-End Developer", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Jon Arshaf", position: "Digital Marketer", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Kani Jon", position: "UI/UX Designer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Maria Rodriguez", position: "Back-End Developer", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Alex Chen", position: "Project Manager", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "David Smith", position: "DevOps Engineer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Sophia Loren", position: "QA Tester", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Michael B.", position: "Data Scientist", image: "Members/person1.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Chris Evans", position: "Mobile Developer", image: "Members/person2.png", linkedin: "#", github: "#", personalPage: "#" },
-            { name: "Jessica Alba", position: "Content Strategist", image: "Members/person3.png", linkedin: "#", github: "#", personalPage: "#" }
+        { 
+            name: "Amirreza Parvahan", 
+            position: "Team Member", 
+            image: "Members/Amirreza Parvahan/Amirreza Parvahan.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Amirreza Parvahan/index.html" 
+        },
+        { 
+            name: "Asad", 
+            position: "Team Member", 
+            image: "Members/Asad/Asad.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Asad/index.html" 
+        },
+        { 
+            name: "Kasra Davoodi", 
+            position: "Team Member", 
+            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Kasra Davoodi/index.html" 
+        },
+        { 
+            name: "Mohammad Hoseyni", 
+            position: "Team Member", 
+            image: "Members/Mohammad Hoseyni/Mohammad Hoseyni.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Mohammad Hoseyni/index.html" 
+        },
+        { 
+            name: "Nafas Shahmohammadi", 
+            position: "Team Member", 
+            image: "Members/Nafas Shahmohammadi/Nafas Shahmohammadi.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Nafas Shahmohammadi/index.html" 
+        },
+        { 
+            name: "Tarane Rafati", 
+            position: "Team Member", 
+            image: "Members/Tarane Rafati/Tarane Rafati.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Tarane Rafati/index.html" 
+        }
     ];
+    // === END OF MODIFICATION ===
+    //
+
     let cardsHTML = '';
     teamMembers.forEach(member => {
         cardsHTML += `
@@ -105,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  // --- Chatbot Logic ---
+  // --- Chatbot Logic (unchanged) ---
   const chatPopup = document.getElementById("aiChat");
   const openChatBtn = document.getElementById('open-chat-btn');
   const closeChatBtn = document.getElementById('close-chat-btn');
@@ -156,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 500); // Small delay for a better effect
   }
 
-  // Function to open the chat window
   function openChat() {
       chatPopup.classList.add("open");
       if (!isChatInitialized) {
@@ -164,12 +207,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 
-  // Function to close the chat window
   function closeChat() {
       chatPopup.classList.remove("open");
   }
 
-  // Function to send a message
   async function sendMessage() {
     const message = userInput.value;
     if (message.trim() === "") return;
@@ -209,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // --- Attach Event Listeners ---
   openChatBtn.addEventListener('click', openChat);
   closeChatBtn.addEventListener('click', closeChat);
   sendChatBtn.addEventListener('click', sendMessage);
@@ -220,67 +260,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Language button functionality
   langButtons.forEach(button => {
     button.addEventListener('click', () => {
         langButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        // Optional: you could add a message like "Language set to Farsi"
     });
   });
-
-});
-
-// ************************** projects.js **************************
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    // --- Project Expander Logic ---
-    const detailButtons = document.querySelectorAll('.btn-outline-light[href^="#project-"]');
-
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const content = document.querySelector(targetId);
-
-            if (content) {
-                // Toggle the 'show' class to trigger the animation
-                content.classList.toggle('show');
-
-                // Change button text based on state
-                if (content.classList.contains('show')) {
-                    this.textContent = 'Hide AI Modules';
-                    // Smooth scroll to the content
-                    setTimeout(() => {
-                        content.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 300); // Delay to allow expander to start opening
-                } else {
-                    this.textContent = 'Explore AI Modules';
-                }
-            }
-        });
-    });
-
-    // --- Scroll Animation for Project Items ---
-    const projectItems = document.querySelectorAll('.project-item');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    projectItems.forEach(item => {
-        // Initially pause the animation
-        item.style.animationPlayState = 'paused';
-        observer.observe(item);
-    });
 
 });

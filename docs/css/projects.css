@@ -134,8 +134,104 @@ body {
     border-color: #17a2b8;
 }
 
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* --- Academic Experiences Section --- */
+.academic-experiences-section {
+    background-color: #212529;
+}
+
+.academic-item {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s forwards;
+    animation-play-state: paused;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.academic-card {
+    background-color: #2c3034;
+    border-radius: 15px;
+    border: 1px solid #495057;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.academic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: #17a2b8;
+}
+
+.academic-card .card-body {
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+.academic-card h5 {
+    color: #17a2b8;
+    margin-bottom: 0.75rem;
+}
+
+.academic-card .card-text {
+    color: #ced4da;
+    font-size: 0.9rem; /* Slightly smaller text for description */
+    flex-grow: 1; /* Allow description to take up space */
+}
+
+.academic-card .card-meta {
+    color: #adb5bd;
+    font-size: 0.85rem;
+}
+
+.academic-card .card-footer {
+    background-color: rgba(23, 162, 184, 0.1);
+    border-top: 1px solid #495057;
+    color: #17a2b8;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 0 0 14px 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.academic-card:hover .card-footer {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+/* --- NEW STYLES FOR CARD DETAILS --- */
+.academic-card .card-authors {
+    font-size: 0.8rem;
+    color: #adb5bd;
+}
+
+.academic-card .card-authors span {
+    font-style: italic;
+    color: #ced4da;
+}
+
+.academic-card .card-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.academic-card .keyword-chip {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
 }

@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Scroll Animation for Project Items ---
-    const projectItems = document.querySelectorAll('.project-item');
+    // --- Scroll Animation for Items ---
+    // Select both project and academic items for the animation
+    const animatedItems = document.querySelectorAll('.project-item, .academic-item');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     });
 
-    projectItems.forEach(item => {
+    animatedItems.forEach(item => {
         // Initially pause the animation
         item.style.animationPlayState = 'paused';
         observer.observe(item);

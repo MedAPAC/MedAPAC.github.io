@@ -1,66 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <title>Emily Carter - Portfolio</title>
-  
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Playfair+Display:700|Poppins:500" rel="stylesheet">
-  
-  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../../vendor/aos/aos.css" rel="stylesheet">
-  
-  <link href="../../css/cv.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: Change the title to the member's name -->
+    <title>[Your Name] - CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Make sure the path to your CSS files is correct -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cv.css">
 </head>
-
 <body>
-
-  <header id="header" class="header-fixed">
-    <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center"><h1>EC.</h1></a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle bi bi-list"></i>
-      </nav>
-    </div>
-  </header><main id="main">
-
-    <section id="hero" class="hero d-flex align-items-center">
-      <img src="assets/img/hero-bg.jpg" alt="background image" class="hero-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 data-aos="fade-up">I'm Emily Carter</h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-                <span class="typed" data-typed-items="A Developer, A Designer, A Problem Solver"></span>
-            </p>
-            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="#"><i class="bi bi-twitter"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
+    <!-- The header remains consistent with the main site -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="../index.html">Zjox Softwarks</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#project">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#service">Service</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../../team.html">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section></main>
+        </nav>
+    </header>
 
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../vendor/aos/aos.js"></script>
-  <script src="../../vendor/typed.js/typed.umd.js"></script>
-  <script src="../../vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../../vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  
-  <script src="../../js/cv.js"></script>
+    <main>
+        <!-- Section 1: Hero with Background Image -->
+        <!-- EDIT: Change the  background-image URL to the member's photo -->
+        <section class="member-hero-section" style="background-image: url('https://placehold.co/1920x1080/343a40/ffffff?text=Member+Photo');">
+            <div class="hero-content">
+    <h1 class="display-3 fw-bold">[Your Name]</h1>
+    <p class="lead" data-specialties="Software Engineer,Data Scientist,AI Researcher,Cloud Architect">
+        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+    </p>
+
+    <div class="social-icons mt-4">
+        <a href="mailto:your.email@example.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="#" target="_blank" class="social-icon" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+</div>
+            
+        </section>
+
+        <!-- Wrapper for page content below the hero -->
+        <div class="cv-content-wrap">
+            <div class="container py-5">
+                <!-- Section 2: Biography -->
+                <section id="bio" class="mb-5">
+                    <div class="row align-items-center g-5">
+                        <div class="col-md-4 text-center">
+                            <!-- EDIT: Change src to a smaller, portrait-style image -->
+                            <img src="https://placehold.co/300x300/2c3034/ffffff?text=Bio+Pic" alt="Portrait of [Your Name]" class="bio-image">
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="section-title">Biography</h2>
+                            <!-- EDIT: Write a personal summary -->
+                            <p class="text-white-50">Write a brief summary about yourself, your professional interests, and what motivates you. Talk about your passion for your work, your research focus, and what you bring to the team. This is a great place to give a high-level overview of your career and academic journey.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Education -->
+                <section id="education" class="cv-section p-4 p-md-5 mb-5">
+                     <h2 class="section-title">Education</h2>
+                     <div class="timeline">
+                         <!-- EDIT: Add your education details. Add or remove timeline-item divs as needed. -->
+                         <div class="timeline-item">
+                            <h5 class="fw-bold">[Degree, e.g., Ph.D. in Computer Science]</h5>
+                            <p class="text-info mb-1">[Institution Name] | [Start Year] - [End Year]</p>
+                            <p class="text-white-50">Mention your thesis title, key research areas, or any academic honors.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5 class="fw-bold">[Degree, e.g., M.Sc. in Artificial Intelligence]</h5>
+                            <p class="text-info mb-1">[Institution Name] | [Start Year] - [End Year]</p>
+                            <p class="text-white-50">Mention relevant coursework or projects.</p>
+                        </div>
+                     </div>
+                </section>
+
+                <!-- Section 4: Projects -->
+                <section id="projects" class="cv-section p-4 p-md-5 mb-5">
+                    <h2 class="section-title">Projects</h2>
+                    <!-- MODIFIED: Replaced timeline with a responsive card grid -->
+                    <div class="row">
+                        <!-- EDIT: Add or remove project cards as needed. Recommended image size: 600x400 -->
+                        <!-- Project Card 1 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/343a40/ffffff?text=Project+1" alt="Project 1 Thumbnail">
+                                <div class="project-card-overlay">
+                                    <h5 class="project-card-title">Project Name 1</h5>
+                                    <p class="project-card-description">A brief description of the project, its goals, and the technologies used.</p>
+                                    <!-- Optional: Add a link to the project -->
+                                    <!-- <a href="#" class="btn btn-outline-info btn-sm mt-2">Learn More</a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/2c3034/ffffff?text=Project+2" alt="Project 2 Thumbnail">
+                                <div class="project-card-overlay">
+                                    <h5 class="project-card-title">Project Name 2</h5>
+                                    <p class="project-card-description">A brief description of the project, its goals, and the technologies used.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/495057/ffffff?text=Project+3" alt="Project 3 Thumbnail">
+                                <div class="project-card-overlay">
+                                    <h5 class="project-card-title">Project Name 3</h5>
+                                    <p class="project-card-description">A brief description of the project, its goals, and the technologies used.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more cards here following the same structure -->
+                    </div>
+                </section>
+
+                <!-- Section 5: Selected Papers -->
+                <section id="papers" class="cv-section p-4 p-md-5">
+                     <h2 class="section-title">Selected Papers</h2>
+                     <ul class="paper-list">
+                         <!-- EDIT: Add your publications. Copy the <li> block for each paper. -->
+                         <li>
+                             <p class="paper-title">"[Paper Title]"</p>
+                             <p class="paper-meta">Authors, Journal or Conference Name, Year</p>
+                             <a href="[Link to Paper]" target="_blank" class="paper-link">Read Paper &rarr;</a>
+                         </li>
+                         <li>
+                             <p class="paper-title">"[Another Paper Title]"</p>
+                             <p class="paper-meta">Authors, Journal or Conference Name, Year</p>
+                             <a href="[Link to Paper]" target="_blank" class="paper-link">Read Paper &rarr;</a>
+                         </li>
+                     </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer remains consistent with the main site -->
+    <footer class="site-footer pt-5 pb-4">
+        <div class="container">
+             <div class="text-center text-white-50">
+                <p>&copy; 2024 Zjox Softwarks. All Rights Reserved.</p>
+             </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+        const specialtyElement = document.querySelector("p.lead[data-specialties]");
+
+        // Exit if the element doesn't exist
+        if (!specialtyElement) return;
+
+        const specialties = specialtyElement.dataset.specialties.split(',');
+        const typingDelay = 100;
+        const erasingDelay = 50;
+        const newTextDelay = 2000; // Delay between current and next text
+        let specialtyIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < specialties[specialtyIndex].length) {
+                if (!cursorSpan.classList.contains("typing")) {
+                    cursorSpan.classList.add("typing");
+                }
+                typedTextSpan.textContent += specialties[specialtyIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                cursorSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                if (!cursorSpan.classList.contains("typing")) {
+                    cursorSpan.classList.add("typing");
+                }
+                typedTextSpan.textContent = specialties[specialtyIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                cursorSpan.classList.remove("typing");
+                specialtyIndex++;
+                if (specialtyIndex >= specialties.length) specialtyIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        if (specialties.length && specialties[0].length > 0) {
+            setTimeout(type, newTextDelay / 2);
+        }
+    });
+</script>
 
 </body>
 </html>

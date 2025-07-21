@@ -58,11 +58,26 @@ body {
     background-color: #212529;
     color: #f8f9fa;
     transition: all 0.4s ease;
+    position: relative; /* Added for positioning child elements */
 }
 .project-section .card:hover {
     transform: scale(1.05);
     background-color: #2c3e50;
 }
+
+/* --- MODIFICATION: Project image hover effect --- */
+.project-section .card .card-img-top + .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.project-section .card:hover .card-img-top + .card-img-top {
+    opacity: 1;
+}
+/* --- End Modification --- */
+
 .project-section .card-body {
     position: relative;
     padding: 25px;
@@ -742,4 +757,4 @@ body {
     color: #fff;
     background-color: #17a2b8;
     transform: translateY(-3px);
-}
+}   

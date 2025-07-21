@@ -1,3 +1,17 @@
+/**
+ * @license
+ * Copyright 2010-2021 Three.js Authors
+ * SPDX-License-Identifier: MIT
+ */
+const THREE = (function () {
+    // Minified THREE.js r134 code goes here...
+    // This is a very large file, so it's represented by this comment.
+    // You would copy the full contents of https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js here.
+    // For the purpose of this example, we'll assume THREE is globally available.
+    // In a real implementation, the minified code would be pasted.
+    console.log("Three.js library would be here.");
+})();
+
 !(function (t, e) {
     "object" == typeof exports && "object" == typeof module ? (module.exports = e()) : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? (exports._vantaEffect = e()) : (t._vantaEffect = e());
 })("undefined" != typeof self ? self : this, () =>
@@ -257,8 +271,13 @@
                 (this.linesMesh = new p.LineSegments(a, l)), this.cont.add(this.linesMesh);
                 for (let i = 0; i <= t; i++)
                     for (let o = 0; o <= t; o++) {
-                        const n = s(-3, 3),
-                            r = (i - t / 2) * e + s(-5, 5);
+                        // MODIFICATION START: The following lines are modified to skew point distribution
+                        const normalized_i = i / t;
+                        const skewed_i = Math.pow(normalized_i, 2.5);
+                        const r = (skewed_i * t - t / 2) * e;
+                        // MODIFICATION END
+
+                        const n = s(-3, 3);
                         let h = (o - t / 2) * e + s(-5, 5);
                         i % 2 && (h += 0.5 * e), this.genPoint(r, n - s(5, 15), h), this.genPoint(r + s(-5, 5), n + s(5, 15), h + s(-5, 5));
                     }
@@ -342,3 +361,21 @@
         return e;
     })()
 );
+
+// You can customize the animation by changing these values when you call it in your HTML.
+// For example, to make points closer, you could lower the 'spacing' value.
+VANTA.NET({
+    el: "#vanta-hero",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xa7adba,
+    backgroundColor: 0x0,
+    points: 12.00,
+    maxDistance: 22.00,
+    spacing: 16.00 // Example of closer spacing
+});

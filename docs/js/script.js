@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let isChatInitialized = false;
 
   // --- Hero Section Dynamic Text ---
-  const words = ["Workflow Intelligence", "Predictive Care", "Next-Gen Co-Pilots"];
+  const words = ["Workflow Intelligence", "Predictive Care", "Next-Gen Co-Pilots "];
   let index = 0;
   const dynamicTextElement = document.getElementById('hero-dynamic-text');
 

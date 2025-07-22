@@ -131,23 +131,16 @@
                                 </div>
                             </div>
                             <div class="product-showcase mt-5">
-                                <h4 class="fw-bold text-center mb-4 section-title"><i
-                                        class="fas fa-images me-2"></i>Product Showcase</h4>
-                                <div class="row g-3">
-                                    <div class="col-md-4">
-                                        <img src="https://placehold.co/400x300/34495e/ffffff?text=Hemorrhage+Detection"
-                                            class="img-fluid rounded" alt="Hemorrhage Detection Example">
+                                <h4 class="fw-bold text-center mb-4 section-title">
+                                    <i class="fas fa-images me-2"></i>Interactive Diagnosis Slider
+                                </h4>
+                                <div id="slider" class="beer-slider" data-start="50">
+                                    <div class="beer-reveal">
+                                        <img src="../brain_theme.png" alt="CT Scan After Diagnosis">
                                     </div>
-                                    <div class="col-md-4">
-                                        <img src="https://placehold.co/400x300/34495e/ffffff?text=Segmentation+Mask"
-                                            class="img-fluid rounded" alt="Segmentation Mask Example">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="https://placehold.co/400x300/34495e/ffffff?text=XAI+Heatmap"
-                                            class="img-fluid rounded" alt="XAI Heatmap Example">
-                                    </div>
+                                    <img src="../brain_theme_hover.png" alt="CT Scan Before Diagnosis">
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -160,7 +153,6 @@
                         class="fas fa-book-open me-2"></i>Academic & Research Contributions</h2>
                 <div class="row g-4">
 
-                    <!-- Academic Item 1: Paper -->
                     <div class="col-md-6 col-lg-4 academic-item">
                         <a href="papers/hyperparameter-tuning-ich/index.html" target="_blank" class="card-link">
                             <div class="academic-card h-100">
@@ -189,7 +181,6 @@
                         </a>
                     </div>
 
-                    <!-- MODIFIED Academic Item 2: HemoricaDataset -->
                     <div class="col-md-6 col-lg-4 academic-item">
                         <a href="papers/hemoricadataset-paper/index.html" target="_blank" class="card-link">
                             <div class="academic-card h-100">
@@ -218,7 +209,6 @@
                         </a>
                     </div>
 
-                    <!-- Academic Item 3: Paper (Example) -->
                     <div class="col-md-6 col-lg-4 academic-item">
                         <a href="paper-xai-methods.html" target="_blank" class="card-link">
                             <div class="academic-card h-100">
@@ -247,8 +237,19 @@
         </div>
     </footer>
 
+    <svg style="display: none;">
+        <defs>
+            <clipPath id="svgPath" clipPathUnits="objectBoundingBox" transform="scale(0.00083 0.0075)">
+                <path
+                    d="M1397,490H204c263,0,160-32,371-33,191.52-.91,150.49-135.14,225-92C990,475,1144,490,1397,490Z"
+                    transform="translate(-178 -350.46)" />
+            </clipPath>
+        </defs>
+    </svg>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../js/projects.js"></script>
+    <script src="../../js/beer-slider.js"></script>
 </body>
 
 </html>

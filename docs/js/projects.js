@@ -2,6 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- Initialize all Beer Sliders ---
+    // This finds all elements with the 'beer-slider-instance' class and initializes them.
+    const sliders = document.querySelectorAll('.beer-slider-instance');
+    sliders.forEach(slider => {
+        if (typeof BeerSlider !== 'undefined') {
+            new BeerSlider(slider);
+        } else {
+            console.error('BeerSlider script not loaded.');
+        }
+    });
+
     // --- Project Expander Logic ---
     const detailButtons = document.querySelectorAll('.btn-outline-light[href^="#project-"]');
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,19 @@
     <!-- The path to the main projects.css is now relative to the paper's folder -->
     <link rel="stylesheet" href="../../css/projects.css">
     <!-- This page's specific stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/papers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <!-- The navigation bar remains consistent with the rest of the site -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
             <div class="container">
                 <a class="navbar-brand fw-bold fs-4" href="../../index.html">Zjox Softwarks</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,8 +40,9 @@
     <main>
         <section class="paper-header text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold">Comprehensive Hyperparameter Tuning to Enhance Deep Learning Performance for Intracranial Hemorrhage Classification</h1>
-                <p class="lead">Published in IEEE, 2024</p>
+                <h1 class="display-5 fw-bold">Comprehensive Hyperparameter Tuning to Enhance Deep Learning Performance
+                    for Intracranial Hemorrhage Classification</h1>
+                <p class="lead">Published in IEEE ICRoM Conference, 2024</p>
             </div>
         </section>
 
@@ -49,9 +53,22 @@
                         <div class="col-lg-8">
                             <h2 class="fw-bold">Abstract</h2>
                             <p class="text-white-50 abstract-text">
-                                Intracranial hemorrhages (ICHs) pose a critical medical challenge with a high mortality rate, necessitating timely and accurate diagnosis. This study focuses on enhancing the performance of deep learning models for classifying brain hemorrhages in CT scan images using the PhysioNet dataset. A grid search methodology was employed to tune hyperparameters, particularly addressing the imbalance between ICH and healthy slices. The study utilized ResNet50 for hyperparameter tuning, achieving significant improvements in sensitivity and overall performance through undersampling, bootstrapping, augmentation, and weighted loss techniques. The ResNet50 model demonstrated remarkable performance at the slice-level scope, achieving a sensitivity of 0.94, a specificity of 0.91, an F1 score of 0.64, and an accuracy of 0.91. It outperformed the literature in both sensitivity and accuracy, despite utilizing a smaller and more constrained dataset. At the patient-level scope, our approach achieved even higher metrics with a sensitivity of 1.00, a specificity of 0.80, an F1 score of 0.86, and an accuracy of 0.88, surpassing the literature across all reported metrics.
+                                Intracranial hemorrhages (ICHs) pose a critical medical challenge with a high mortality
+                                rate, necessitating timely and accurate diagnosis. This study focuses on enhancing the
+                                performance of deep learning models for classifying brain hemorrhages in CT scan images
+                                using the PhysioNet dataset. A grid search methodology was employed to tune
+                                hyperparameters, particularly addressing the imbalance between ICH and healthy slices.
+                                The study utilized ResNet50 for hyperparameter tuning, achieving significant
+                                improvements in sensitivity and overall performance through undersampling,
+                                bootstrapping, augmentation, and weighted loss techniques. The ResNet50 model
+                                demonstrated remarkable performance at the slice-level scope, achieving a sensitivity of
+                                0.94, a specificity of 0.91, an F1 score of 0.64, and an accuracy of 0.91. It
+                                outperformed the literature in both sensitivity and accuracy, despite utilizing a
+                                smaller and more constrained dataset. At the patient-level scope, our approach achieved
+                                even higher metrics with a sensitivity of 1.00, a specificity of 0.80, an F1 score of
+                                0.86, and an accuracy of 0.88, surpassing the literature across all reported metrics.
                             </p>
-                             <div class="keywords-section mt-4">
+                            <div class="keywords-section mt-4">
                                 <h3 class="fw-bold">Keywords</h3>
                                 <div class="keyword-tags">
                                     <span class="keyword-tag">Intracranial Hemorrhage</span>
@@ -71,16 +88,22 @@
                             <div class="publication-info">
                                 <h4 class="text-white fw-bold">Publication Details</h4>
                                 <hr class="text-white-50">
-                                <p class="mb-2"><strong>Authors:</strong><br><span class="authors">Seyedmohammad Hoseyni, Kasra Davoodi, Amirhossein Nikoofard, Fatemeh Pakdaman, Mahdi Aliyari-Shoorehdeli</span></p>
-                                <p class="mb-2"><strong>Conference:</strong><br>IEEE</p>
+                                <p class="mb-2"><strong>Authors:</strong><br><span class="authors">M. Hoseyni, K.
+                                        Davoodi, F. Pakdaman A.
+                                        Nikoofard, M. Aliyari-Shoorehdeli</span></p>
+                                <p class="mb-2"><strong>Conference:</strong><br>ICRoM</p>
                                 <p><strong>Year:</strong> 2024</p>
-                                <a href="#" class="btn btn-info w-100 mt-3" onclick="alert('Link to the full paper can be placed here.'); return false;"><i class="fas fa-external-link-alt me-2"></i>View Full Paper</a>
+                                <a href="https://doi.org/10.1109/ICBME64381.2024.10894967"
+                                    class="btn btn-info w-100 mt-3" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt me-2"></i>View Full Paper
+                                </a>
                             </div>
                             <div class="visual-abstract mt-4">
-                               <h4 class="text-white fw-bold">Visuals</h4>
-                               <hr class="text-white-50">
-                               <img src="https://placehold.co/400x300/2c3e50/ffffff?text=Grad-CAM+Result" class="img-fluid rounded shadow" alt="Grad-CAM Visualization">
-                               <p class="text-center text-white-50 mt-2 fst-italic">Grad-CAM highlighting hemorrhagic lesions.</p>
+                                <h4 class="text-white fw-bold">Visuals</h4>
+                                <hr class="text-white-50">
+                                <img src="decision_making.jpg"
+                                    class="img-fluid rounded shadow" alt="Grad-CAM Visualization">
+                                <p class="text-center text-white-50 mt-2 fst-italic">Visiual structure of decision making workflow.</p>
                             </div>
                         </div>
                     </div>
@@ -91,11 +114,12 @@
 
     <footer class="site-footer pt-5 pb-4">
         <div class="container text-center text-md-start">
-             <p class="text-white-50 text-center">Zjox Softwarks &copy; 2025</p>
+            <p class="text-white-50 text-center">Zjox Softwarks &copy; 2025</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="../../css/papers.css"></script>
 </body>
+
 </html>

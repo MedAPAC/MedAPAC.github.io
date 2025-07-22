@@ -1,4 +1,4 @@
-/* style.css for the HemoricaDataset paper page */
+/* Combined stylesheet for all paper pages */
 
 body {
     background-color: #2c3034;
@@ -18,7 +18,7 @@ body {
     background-color: #212529;
     padding: 3rem;
     border-radius: 15px;
-    margin-top: -4rem;
+    margin-top: -4rem; /* Pulls content up over the header's bottom edge */
     position: relative;
     z-index: 10;
 }
@@ -50,13 +50,6 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.dataset-section {
-    background-color: rgba(44, 62, 80, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid #34495e;
-}
-
 .keywords-section {
     margin-top: 2rem;
 }
@@ -83,6 +76,26 @@ body {
     background-color: #17a2b8;
     color: #fff;
     transform: translateY(-2px);
+}
+
+/* Page-specific styles */
+
+/* Styles for HemoricaDataset page */
+.dataset-section {
+    background-color: rgba(44, 62, 80, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #34495e;
+}
+
+/* Styles for Hyperparameter Tuning page */
+.visual-abstract img {
+    border: 3px solid #34495e;
+    transition: border-color 0.3s ease;
+}
+
+.visual-abstract img:hover {
+    border-color: #17a2b8;
 }
 
 /* Animation styles */

@@ -39,13 +39,13 @@ body.cv-page {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 1rem;
+    margin-left: 5rem; /* Adds a margin to the left of the container */
 }
 
-.hero-content h1 {
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+/* Overriding the default white text color for the specified elements */
+.hero-content h1,
+.hero-content .lead {
+    color: #2c3034; /* Setting text color to a dark shade as requested */
 }
 
 /* =================================== */
@@ -59,8 +59,8 @@ body.cv-page {
 
 /* Biography Section */
 .bio-image {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 15px; /* MODIFIED: Changed from 50% to create a square shape */
     border: 5px solid #17a2b8;
@@ -269,4 +269,65 @@ body.cv-page {
 .project-card:hover .project-card-title,
 .project-card:hover .project-card-description {
     transform: translateY(0);
+}
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between education cards */
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #343a40; /* Slightly lighter than the section background */
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #495057;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.education-entry:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: #495057; /* Highlight on hover */
+}
+
+.education-logo {
+    flex-shrink: 0;
+}
+
+.education-logo img {
+    width: 80px; /* Control the size of the logo */
+    height: 80px;
+    border-radius: 50%; /* Make the logo container circular */
+    background-color: #fff; /* White background for the logo */
+    padding: 5px; /* Padding around the logo image */
+    object-fit: contain;
+    border: 2px solid #17a2b8;
+}
+
+.education-details h5 {
+    color: #f8f9fa;
+    margin-bottom: 0.25rem;
+}
+
+.education-details p {
+    margin-bottom: 0;
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.7) !important;
+    background-color: #2c303496 !important;
+}
+/* Add this to your cv.css file */
+
+.project-link,
+.project-link:hover {
+    color: inherit; /* This makes the link's text use the color of its parent */
+    text-decoration: none; /* This removes the underline */
+}
+/* Add this rule to cv.css to remove the default link underline */
+.paper-list li a {
+    text-decoration: none;
 }

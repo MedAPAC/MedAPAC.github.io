@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - MedAPAC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #212529;
+      color: #f8f9fa;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+.careers-hero {
+  position: relative;
+  top: 0;
+  padding: 160px 20px 100px; 
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  z-index: 0;
+}
+
+    .careers-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .careers-hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 20px auto 0;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+      border-radius: 50px;
+      padding: 12px 20px;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      background-color: #2c3034;
+      color: #f8f9fa;
+    }
+
+    .filter-bar input::placeholder {
+      color: #bbb;
+    }
+
+    .filter-bar select {
+      color: #f8f9fa;
+    }
+
+    .job-card {
+      background: #2c3034;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      padding: 40px 20px 30px;
+    }
+
+    .job-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .job-icon {
+      font-size: 3rem;
+      background: linear-gradient(135deg, #0dcaf0, #17a2b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .job-card h3 {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .job-card p {
+      color: #cfd4da;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .btn-apply {
+      background: linear-gradient(135deg, #0dcaf0, #17a2b8);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 25px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-apply:hover {
+      background: linear-gradient(135deg, #17a2b8, #0dcaf0);
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    .careers-section h2 {
+      color: #17a2b8;
+      margin-bottom: 50px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .careers-section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #0dcaf0;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    .footer-link {
+      color: #aaa;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: #0dcaf0;
+    }
+
+    .social-icon {
+      display: inline-block;
+      color: #aaa;
+      background-color: #2c3034;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #fff;
+      background: linear-gradient(135deg, #0dcaf0, #17a2b8);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .careers-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .careers-hero p {
+        font-size: 1rem;
+      }
+
+      .job-card {
+        padding: 30px 15px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-4" href="#">MedAPAC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <main class="pt-5 mt-5">
+
+    <section class="careers-hero">
+      <h1>🚀 Join Our Mission</h1>
+      <p>At MedAPAC, we’re building the future of healthcare technology. Explore our open positions and grow with
+        us.</p>
+    </section>
+
+    <section class="careers-section py-5">
+      <div class="container">
+
+        <h2 class="display-5 fw-bold text-center mb-5">Current Openings</h2>
+
+        <div class="filter-bar d-flex flex-column flex-md-row justify-content-center gap-3 mb-5">
+          <input type="text" id="searchInput" class="form-control w-50" placeholder="Search jobs...">
+          <select id="filterSelect" class="form-select w-auto">
+            <option value="all">All Categories</option>
+            <option value="ai">AI</option>
+            <option value="web">Web</option>
+            <option value="embedded">Embedded</option>
+          </select>
+        </div>
+
+        <div class="row g-4" id="jobsList">
+
+          <div class="col-md-6 col-lg-4 job-item" data-category="ai">
+            <div class="card job-card h-100 text-center">
+              <div class="job-icon"><i class="fas fa-brain"></i></div>
+              <h3 class="fw-bold">AI Engineer (LLM & VLM)</h3>
+              <p>Work on cutting-edge LLMs and Vision-Language Models to revolutionize clinical diagnostics.</p>
+              <a href="mailto: mohammadhosini60@gmail.com?subject=Application%20for%20AI%20Engineer"
+                class="btn btn-apply rounded-pill mt-auto">Apply Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 job-item" data-category="web">
+            <div class="card job-card h-100 text-center">
+              <div class="job-icon"><i class="fas fa-code"></i></div>
+              <h3 class="fw-bold">Web Developer</h3>
+              <p>Build responsive, modern, and performant web applications to support healthcare innovation.</p>
+              <a href="mailto: mohammadhosini60@gmail.com?subject=Application%20for%20Web%20Developer"
+                class="btn btn-apply rounded-pill mt-auto">Apply Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 job-item" data-category="embedded">
+            <div class="card job-card h-100 text-center">
+              <div class="job-icon"><i class="fas fa-microchip"></i></div>
+              <h3 class="fw-bold">Embedded Systems Engineer</h3>
+              <p>Design and implement hardware-software solutions for next-generation intelligent medical devices.</p>
+              <a href="mailto: mohammadhosini60@gmail.com?subject=Application%20for%20Embedded%20Systems%20Engineer"
+                class="btn btn-apply rounded-pill mt-auto">Apply Now</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer pt-5 pb-4">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-4 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold text-info">MedAPAC</h5>
+          <p class="text-white-50">We build intelligent software that analyzes medical images, helping healthcare
+            professionals detect diseases faster and more accurately.</p>
+        </div>
+        <div class="col-md-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold">Navigate</h5>
+          <p><a href="#about" class="footer-link">About</a></p>
+          <p><a href="#project" class="footer-link">Projects</a></p>
+          <p><a href="#service" class="footer-link">Services</a></p>
+          <p><a href="#team" class="footer-link">Our Team</a></p>
+        </div>
+        <div class="col-md-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
+          <p class="text-white-50"><i class="fas fa-envelope me-3"></i> mohammadhosini60@gmail.com</p>
+          <p class="text-white-50"><i class="fas fa-phone me-3"></i> +01 234 567 88</p>
+          <p class="text-white-50"><i class="fas fa-print me-3"></i> +01 234 567 89</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="text-center text-md-start text-white-50">&copy; 2025 MedAPAC. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-end">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const filterSelect = document.getElementById("filterSelect");
+    const jobsList = document.querySelectorAll(".job-item");
+
+    function filterJobs() {
+      const searchValue = searchInput.value.toLowerCase();
+      const filterValue = filterSelect.value;
+
+      jobsList.forEach(job => {
+        const title = job.querySelector("h3").textContent.toLowerCase();
+        const description = job.querySelector("p").textContent.toLowerCase();
+        const category = job.getAttribute("data-category");
+
+        const matchesSearch = title.includes(searchValue) || description.includes(searchValue);
+        const matchesFilter = filterValue === "all" || category === filterValue;
+
+        job.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+      });
+    }
+
+    searchInput.addEventListener("input", filterJobs);
+    filterSelect.addEventListener("change", filterJobs);
+  </script>
+</body>
+
+</html>

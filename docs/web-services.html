@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web & Development Services - MedAPAC</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero-section {
+  background: linear-gradient(135deg, rgba(13,202,240,0.6), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1581093588401-7d07e8f53872?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  height: 300px; 
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  margin-top: 0; 
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+.hero-section p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+.service-section .job-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.4s, box-shadow 0.4s;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 30px 20px;
+  position: relative;
+}
+.service-section .job-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(13,202,240,0.25);
+}
+.job-icon {
+  font-size: 3rem;
+  color: #0dcaf0;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.job-card:hover .job-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+.job-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.job-card p {
+  color: #ccc;
+  font-size: 1rem;
+  min-height: 120px;
+}
+.btn-apply {
+  background: linear-gradient(90deg, #0dcaf0, #0bbcd4);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 30px;
+  transition: 0.3s ease;
+}
+.btn-apply:hover {
+  background: linear-gradient(90deg, #0bbcd4, #0dcaf0);
+}
+
+footer {
+  background-color: #111;
+  color: #aaa;
+  padding: 50px 0 25px;
+  font-size: 0.9rem;
+}
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-link:hover {
+  color: #0dcaf0;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 2.2rem; }
+  .hero-section p { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+<div class="container-fluid">
+  <a class="navbar-brand fw-bold fs-4" href="index.html">MedAPAC</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#project">Project</a></li>
+      <li class="nav-item"><a class="nav-link active" href="web-services.html">Web & Dev</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#team">Our Team</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+</header>
+
+<main class="pt-5 mt-5">
+
+<section class="hero-section">
+  <div class="container text-center">
+    <h1>Web & Development Services</h1>
+    <p>We create intelligent web applications to support medical workflows, image analysis, and clinical insights.</p>
+  </div>
+</section>
+
+<section class="service-section py-5">
+<div class="container">
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card job-card h-100 text-center p-4">
+        <div class="job-icon"><i class="fas fa-file-medical"></i></div>
+        <h3>Medical Annotation WebApp</h3>
+        <p>Web application that helps you classify and segment medical images. Supports DICOM and NIfTI formats, optimized for AI workflows and hospital integration.</p>
+        <a href="mailto:contact@zjoxsoftwarks.com?subject=Inquiry%20Medical%20Annotation%20WebApp" class="btn btn-apply rounded-pill mt-auto">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<footer class="site-footer pt-5 pb-4">
+<div class="container text-center text-md-start">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+      <h5 class="text-uppercase mb-4 fw-bold text-info">MedAPAC</h5>
+      <p class="text-white-50">Intelligent software that analyzes medical images, helping healthcare professionals detect diseases with speed and accuracy.</p>
+    </div>
+    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+      <h5 class="text-uppercase mb-4 fw-bold">Navigate</h5>
+      <p><a href="index.html#about" class="footer-link">About</a></p>
+      <p><a href="index.html#project" class="footer-link">Projects</a></p>
+      <p><a href="web-services.html" class="footer-link">Web & Dev</a></p>
+      <p><a href="index.html#team" class="footer-link">Our Team</a></p>
+    </div>
+    <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
+      <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
+      <p class="text-white-50"><i class="fas fa-envelope me-3"></i> mohammadhosini60@gmail.com</p>
+      <p class="text-white-50"><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+    </div>
+  </div>
+  <hr class="my-4">
+  <div class="row align-items-center">
+    <div class="col-md-7 col-lg-8">
+      <p class="text-center text-md-start text-white-50">&copy; 2025 MedAPAC. All Rights Reserved.</p>
+    </div>
+    <div class="col-md-5 col-lg-4">
+      <div class="text-center text-md-end">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

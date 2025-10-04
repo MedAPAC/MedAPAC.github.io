@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 { 
             name: "Amirreza Parvahan", 
             position: "Team Member", 
-            image: "Members/Amirreza Parvahan/AP1.png", 
+            image: "Members/Amirreza Parvahan/AP2.png", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Amirreza Parvahan/index.html" 

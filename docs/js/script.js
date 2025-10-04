@@ -29,22 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const teamMembers = [
         { 
-            name: "Amirreza Parvahan", 
+            name: "Mohammad Hoseyni", 
             position: "Team Member", 
-            image: "Members/Amirreza Parvahan/AP2.jpg", 
+            image: "Members/Mohammad Hoseyni/Mohammad Hoseyni.png", 
             linkedin: "#", 
             github: "#", 
-            personalPage: "Members/Amirreza Parvahan/index.html" 
+            personalPage: "Members/Mohammad Hoseyni/index.html" 
         },
-                { 
-            name: "Tanaz Ghahremani", 
-            position: "Team Member", 
-            image: "Members/Tarane Rafati/Tarane Rafati.png", 
-            linkedin: "#", 
-            github: "#", 
-            personalPage: "Members/Tanaz Ghaheremani/index.html" 
-        },
-                        { 
+          { 
             name: "Arman Forouzesh", 
             position: "Team Member", 
             image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
@@ -68,19 +60,28 @@ document.addEventListener('DOMContentLoaded', function () {
             github: "#", 
             personalPage: "Members/Kasra Davoodi/index.html" 
         },
-        { 
-            name: "Mohammad Hoseyni", 
+                        { 
+            name: "Tanaz Ghahremani", 
             position: "Team Member", 
-            image: "Members/Mohammad Hoseyni/Mohammad Hoseyni.png", 
+            image: "Members/Tanaz Ghahremani/TG.png", 
             linkedin: "#", 
             github: "#", 
-            personalPage: "Members/Mohammad Hoseyni/index.html" 
+            personalPage: "Members/Tanaz Ghahremani/index.html" 
+        },
+
+                { 
+            name: "Amirreza Parvahan", 
+            position: "Team Member", 
+            image: "Members/Amirreza Parvahan/AP1.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Amirreza Parvahan/index.html" 
         },
         
         { 
-            name: "Tarane Rafati", 
+            name: "Zahra Rafati", 
             position: "Team Member", 
-            image: "Members/Tarane Rafati/TR1.jpg", 
+            image: "Members/Tarane Rafati/TR1.png", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Tarane Rafati/index.html" 

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
           { 
             name: "Arman Forouzesh", 
             position: "Team Member", 
-            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
+            image: "Members/Arman Forouzesh/Profile_noBg.png", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Arman Forouzesh/index.html" 

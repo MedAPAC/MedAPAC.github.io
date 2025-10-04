@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "Members/Amirreza Parvahan/AP2.png", 
             linkedin: "#", 
             github: "#", 
-            personalPage: "Members/Amirreza Parvahan/index.html" 
+            personalPage: "/Members/Amirreza Parvahan/index.html" 
         },
         
         { 

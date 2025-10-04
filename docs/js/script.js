@@ -24,26 +24,38 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(changeWord, 3000);
   }
 
-  // --- Team Section Carousel ---
   const teamCarousel = document.querySelector('.team-carousel');
   if (teamCarousel) {
-    //
-    // === START OF MODIFICATION ===
-    // This array is now generated based on your 'members' folder structure.
-    // If you add a new member, just add a new object to this list.
+
     const teamMembers = [
         { 
             name: "Amirreza Parvahan", 
             position: "Team Member", 
-            image: "Members/Amirreza Parvahan/Amirreza Parvahan.png", 
+            image: "Members/Amirreza Parvahan/AP2.jpg", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Amirreza Parvahan/index.html" 
         },
-        { 
-            name: "Asad", 
+                { 
+            name: "Tanaz Ghahremani", 
             position: "Team Member", 
-            image: "Members/Asad/Asad.png", 
+            image: "Members/Tarane Rafati/Tarane Rafati.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Tanaz Ghaheremani/index.html" 
+        },
+                        { 
+            name: "Arman Forouzesh", 
+            position: "Team Member", 
+            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
+            linkedin: "#", 
+            github: "#", 
+            personalPage: "Members/Arman Forouzesh/index.html" 
+        },
+        { 
+            name: "Hosein Asadolahi", 
+            position: "Team Member", 
+            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Asad/index.html" 
@@ -64,25 +76,17 @@ document.addEventListener('DOMContentLoaded', function () {
             github: "#", 
             personalPage: "Members/Mohammad Hoseyni/index.html" 
         },
-        { 
-            name: "Nafas Shahmohammadi", 
-            position: "Team Member", 
-            image: "Members/Nafas Shahmohammadi/Nafas Shahmohammadi.png", 
-            linkedin: "#", 
-            github: "#", 
-            personalPage: "Members/Nafas Shahmohammadi/index.html" 
-        },
+        
         { 
             name: "Tarane Rafati", 
             position: "Team Member", 
-            image: "Members/Tarane Rafati/Tarane Rafati.png", 
+            image: "Members/Tarane Rafati/TR1.jpg", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Tarane Rafati/index.html" 
         }
     ];
-    // === END OF MODIFICATION ===
-    //
+
 
     let cardsHTML = '';
     teamMembers.forEach(member => {

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
             linkedin: "#", 
             github: "#", 
-            personalPage: "Members/Asad/index.html" 
+            personalPage: "Members/Hosein Asadolahi/index.html" 
         },
         { 
             name: "Kasra Davoodi", 

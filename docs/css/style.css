@@ -758,3 +758,18 @@ body {
     background-color: #17a2b8;
     transform: translateY(-3px);
 }   
+@media (max-width: 768px) {
+  .about-images {
+    height: auto;
+  }
+  .about-images img {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .project-section .card {
+    transform: none !important;
+  }
+}

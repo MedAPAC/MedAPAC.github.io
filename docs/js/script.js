@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const teamMembers = [
         { 
-            name: "Mohammad Hoseyni", 
-            position: "Team Member", 
+            name: "Farhad Hoseyni", 
+            position: "Team Manager", 
             image: "Members/Mohammad Hoseyni/Mohammad Hoseyni.png", 
             linkedin: "#", 
             github: "#", 
@@ -38,31 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
         },
           { 
             name: "Arman Forouzesh", 
-            position: "Team Member", 
+            position: "Computer Vision Engineer", 
             image: "Members/Arman Forouzesh/Profile_noBg.png", 
             linkedin: "#", 
             github: "#", 
             personalPage: "Members/Arman Forouzesh/index.html" 
         },
-        { 
-            name: "Hosein Asadolahi", 
-            position: "Team Member", 
-            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
-            linkedin: "#", 
-            github: "#", 
-            personalPage: "Members/Hosein Asadolahi/index.html" 
-        },
-        { 
-            name: "Kasra Davoodi", 
-            position: "Team Member", 
-            image: "Members/Kasra Davoodi/Kasra Davoodi.png", 
-            linkedin: "#", 
-            github: "#", 
-            personalPage: "Members/Kasra Davoodi/index.html" 
-        },
                         { 
             name: "Tanaz Ghahremani", 
-            position: "Team Member", 
+            position: "Computer Vision Engineer", 
             image: "Members/Tanaz Ghahremani/TG.png", 
             linkedin: "#", 
             github: "#", 
@@ -71,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 { 
             name: "Amirreza Parvahan", 
-            position: "Team Member", 
+            position: "DeoOps Engineer", 
             image: "Members/Amirreza Parvahan/AP2.png", 
             linkedin: "#", 
             github: "#", 
@@ -80,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         { 
             name: "Zahra Rafati", 
-            position: "Team Member", 
+            position: "Software Engineer", 
             image: "Members/Tarane Rafati/TR1.png", 
             linkedin: "#", 
             github: "#", 

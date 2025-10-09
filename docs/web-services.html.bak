@@ -172,7 +172,7 @@ footer {
     </div>
     <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
       <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
-      <p class="text-white-50"><i class="fas fa-envelope me-3"></i> mohammadhosini60@gmail.com</p>
+      <p class="text-white-50"><i class="fas fa-envelope me-3"></i> info@cvops.tech</p>
       <p class="text-white-50"><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
     </div>
   </div>

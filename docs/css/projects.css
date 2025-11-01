@@ -69,7 +69,7 @@ body {
 }
 
 .project-detail-section h2 {
-    color: #17a2b8;
+    color: #005cff;
 }
 
 /* Expander section for achievements */
@@ -103,7 +103,7 @@ body {
 }
 
 .achievement-card h5 {
-    color: #17a2b8;
+    color: #005cff;
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
@@ -116,7 +116,7 @@ body {
 
 .section-title {
     color: #f8f9fa;
-    border-bottom: 2px solid #17a2b8;
+    border-bottom: 2px solid #005cff;
     display: inline-block;
     padding-bottom: 0.5rem;
 }
@@ -131,7 +131,7 @@ body {
 .product-showcase img:hover {
     transform: scale(1.05);
     filter: brightness(1.2);
-    border-color: #17a2b8;
+    border-color: #005cff;
 }
 
 @keyframes fadeIn {
@@ -171,7 +171,7 @@ body {
 .academic-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    border-color: #17a2b8;
+    border-color: #005cff;
 }
 
 .academic-card .card-body {
@@ -180,7 +180,7 @@ body {
 }
 
 .academic-card h5 {
-    color: #17a2b8;
+    color: #005cff;
     margin-bottom: 0.75rem;
 }
 
@@ -198,7 +198,7 @@ body {
 .academic-card .card-footer {
     background-color: rgba(23, 162, 184, 0.1);
     border-top: 1px solid #495057;
-    color: #17a2b8;
+    color: #005cff;
     padding: 0.75rem 1.5rem;
     text-align: center;
     font-weight: 600;
@@ -207,7 +207,7 @@ body {
 }
 
 .academic-card:hover .card-footer {
-    background-color: #17a2b8;
+    background-color: #005cff;
     color: #fff;
 }
 
@@ -243,7 +243,7 @@ body {
     transition: border-color 0.4s ease;
 }
 .beer-slider:hover {
-    border-color: #17a2b8;
+    border-color: #005cff;
 }
 .beer-reveal[data-beer-label]::after, .beer-slider[data-beer-label]::after {
     background: rgba(23, 162, 184, 0.8);
@@ -254,6 +254,6 @@ body {
     font-weight: 600;
 }
 .beer-handle {
-    background: #17a2b8;
+    background: #005cff;
 }
 

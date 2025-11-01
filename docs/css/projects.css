@@ -246,7 +246,7 @@ body {
     border-color: #005cff;
 }
 .beer-reveal[data-beer-label]::after, .beer-slider[data-beer-label]::after {
-    background: rgba(23, 162, 184, 0.8);
+    background: #005cff;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 5px;

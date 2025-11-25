@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         { 
             name: "Zahra Rafati", 
-            position: "Software Engineer", 
+            position: "Computer Vision Engineer", 
             image: "Members/Tarane Rafati/TR1.png", 
             linkedin: "#", 
             github: "#", 
